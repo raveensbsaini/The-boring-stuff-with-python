@@ -10,16 +10,16 @@ def isLeapYear(year):
         return False
 def isValidDate(year,month,day):
     months = {1:31,2:28,3:31,4:30,5:31,6:30,7:31,8:31,9:30,10:31,11:30,12:31}
-    if 0<= month <= 12 and 0<= day <= 31:
+    if 0< month <= 12 and 0<= day <= 31:
         if isLeapYear(year) :
             if month == 2:
-                if 0<= day <= 29:
+                if 0< day <= 29:
                     return True
                 else:
                     return False
-        for i in d:
+        for i in months:
             if month == i:
-                if 0<= day <= d[i]:
+                if 0< day <= months[i]:
                     return True
                 else:
                     return False
